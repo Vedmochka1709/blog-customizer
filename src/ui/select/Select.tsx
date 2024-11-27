@@ -48,7 +48,7 @@ export const Select = (props: SelectProps) => {
 	};
 
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} onClick={handlePlaceHolderClick}>
 			{title && (
 				<>
 					<Text size={12} weight={800} uppercase>
@@ -69,7 +69,6 @@ export const Select = (props: SelectProps) => {
 					)}
 					data-status={status}
 					data-selected={!!selected?.value}
-					onClick={handlePlaceHolderClick}
 					role='button'
 					tabIndex={0}
 					ref={placeholderRef}>
